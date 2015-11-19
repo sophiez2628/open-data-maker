@@ -4,13 +4,13 @@
 
 Before you can run Open Data Maker, you'll need to have the following software
 installed on your computer:
-* [Elasticsearch]
+* [Elasticsearch] 1.7.3
 * [Ruby] 2.2.2
 
 ### Mac OS X
 
 On a Mac, we recommend installing Ruby 2.2.2 via [RVM], and Elasticsearch via
-[Homebrew]. If you are contributing to development, you will also need [Git].
+[Homebrew] using the following command: brew install homebrew/versions/elasticsearch17. This command installs an older version of elastic search, since the most recent version is currently not compatible with open data maker. If you are contributing to development, you will also need [Git].
 If you don't already have these tools, the 18F [laptop] script will install
 them for you.
 
@@ -46,8 +46,8 @@ script, you can restart it with this command:
 ```brew services restart elasticsearch```
 
 ### Start the app
-
 ```
+gem install padrino
 padrino start
 ```
 Go to: http://127.0.0.1:3000/
